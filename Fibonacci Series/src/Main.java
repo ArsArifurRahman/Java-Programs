@@ -20,7 +20,7 @@ public class Main {
         if (number <= 1)
             return number;
 
-        return recursiveFibonacciSeries(number - 1) + recursiveFibonacciSeries(number - 2); // recursively calling the fibonacc() function and then adding them
+        return recursiveFibonacciSeries(number - 1) + recursiveFibonacciSeries(number - 2);
     }
 
     public static void main(String[] args) {
