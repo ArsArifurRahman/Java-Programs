@@ -17,10 +17,8 @@ public class Main {
     }
 
     public int recursiveFibonacciSeries(int number) {
-        if (number == 0)
-            return 0;
-        else if (number == 1)
-            return 1;
+        if (number <= 1)
+            return number;
 
         return recursiveFibonacciSeries(number - 1) + recursiveFibonacciSeries(number - 2); // recursively calling the fibonacc() function and then adding them
     }
