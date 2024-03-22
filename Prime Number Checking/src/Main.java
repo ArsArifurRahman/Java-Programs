@@ -17,11 +17,29 @@ public class Main {
         return true;
     }
 
+    public boolean recursiveCheckPrime(int number, int index) {
+        if (number < 2)
+            return false;
+        else if (number == index)
+            return true;
+        else if (number % index == 0)
+            return false;
+
+        return recursiveCheckPrime(number, index + 1);
+    }
+
     public static void main(String[] args) {
         Main main = new Main();
 
         for (int i = 1; i <= 100; i++) {
             if (main.iterativeCheckPrime(i))
+                System.out.print(i + " ");
+        }
+
+        System.out.print("\n");
+
+        for (int i = 1; i <= 100; i++) {
+            if (main.recursiveCheckPrime(i, 2))
                 System.out.print(i + " ");
         }
     }
